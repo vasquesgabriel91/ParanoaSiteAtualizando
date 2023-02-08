@@ -68,3 +68,18 @@ if(menuHeader.length){
 })
 }
 
+const cardAnimado = document.querySelectorAll('[data-card]');
+const animandoCard = 'cardFlex';
+function flexCard(){
+    const cardTop = window.pageYOffset + ((window.innerHeight * 3) /5) ;
+    cardAnimado.forEach(function(element){
+        if((cardTop)> element.offsetTop){
+            element.classList.add(animandoCard);
+        } 
+    })
+}
+if(cardAnimado.length){
+    window.addEventListener('scroll',function(){
+        flexCard();
+    })
+}
