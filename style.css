@@ -143,7 +143,7 @@
     margin: 0;
     transition: all 0.7s;
     width: 90vw;
-    box-shadow: 0em 0em 2em .5em #0999c546 ;
+    box-shadow: 0em 0em 2em .4em #24242459 ;
 }
 .conteudo2{
      display: flex;
@@ -400,65 +400,7 @@
     height: 60vh;
 }
 
-/*-----------------------CARROSSEL CLIENTES DA PARANOA-----------------------
-.displayCliente{
-    display: flex;
-    background-color: #e9e9e9;
-    height: 37vh;
-    overflow: hidden;
-    flex-flow: wrap;
-}
-.apresentacaoCliente{
-    font-family: 'Open Sans', sans-serif;
-    height: auto;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-transform: uppercase;
-    color: white;
-}
-.apresentacaoCliente h1{
-    font-weight: bold;
-    color: #383838;
-    font-size: 2.3rem;
-    text-transform: uppercase;
-    font-family: 'Ubuntu', sans-serif;
 
-}
-.displayCliente-contente{
-    display: flex;
-    animation: scrolling 35s linear infinite;
-    height: 15vh;
-    align-items: center;
-    margin-bottom: 2em;
-    padding: 5em 0;
-}
-.displayCliente-contente:hover {
-    animation-play-state: paused;
-  }
-  .displayItem {
-    flex: 0 0 20vw;
-  }
-  .displayItem img {
-    padding-bottom: 6em;
-    width: 8vw;
-    filter: contrast(50%) brightness(50%) grayscale(50%);
-  }
-  .displayItem img:hover{
-    filter: contrast(100%) brightness(100%) grayscale(0%);
-  }
-  .unipac img{
-    width: 15vw;
-  }
-  @keyframes scrolling{
-    0%{
-        transform: translateX(99vw);
-    }
-    100%{
-        transform: translatex(-195vw);
-    }
-}*/
 /*-------------------------SESSÃO FOTO PRICIPAL DA PÁGINA(empresa.html) ----------------------*/
 .fabrica-Interna{
     display: inline-flex;
@@ -658,29 +600,34 @@
     opacity: 1;
     transform: translate3d( 0em, 0em, 0em);
 }
-.sobreProdutos{
-    background: linear-gradient(22deg, #cacaca 10%, #ffffff 72%);
+.sobreProdutos {
+    background-image: linear-gradient(-22deg, #b6b6b6 0%, #e9e9e9 100%);
     box-shadow: inset 0em 0em 1em 0.1em #202020;
     display: flex;
     height: auto;
     align-items: center;
+    overflow: hidden;
     justify-content: center;
     padding: 0;
 }
-.apresentacaoProdutos{
-    width: 100vw;
+.apresentacaoProdutos {
+    width: auto;
     height: auto;
-    padding: 2em 5em 2em 5em;
+    padding: 3em;
     display: flex;
     flex-wrap: wrap;
-    justify-content:  center;
+    align-content: center;
+    justify-content: space-around;
     overflow: hidden;
 }
-.fotosProdutos{
-    flex: 1 1 25%;
+.fotosProdutos {
     box-shadow: 0.7em 0.7em 1em 0em #202020;
-    margin: 1.5em;
-    height: 35vh;
+    flex: 1 1 22%;
+    margin: 1.3em;
+    height: 33vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
 }
 .apresentacaoProdutos .fotosProdutos:nth-child(1) {
     background: url('img/produto.jpg') center / cover no-repeat;
@@ -705,6 +652,48 @@
 }
 .apresentacaoProdutos .fotosProdutos:nth-child(8) {
     background: url('img/produção.jpg') center / cover no-repeat;
+}
+.textoProdutos {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: hidden;
+    background-color: #00c8ff3f;
+    backdrop-filter: blur(0.6em);
+}
+.textoProdutos p {
+    color: transparent;
+    text-align: center;
+    text-transform: uppercase;
+    transition-duration: 1.2s;
+    padding: 3em 6em 2.5em 6em;
+    font-size: 0.83rem;
+    margin: 0 auto;
+    height: 28vh;
+}
+.textoProdutos :hover {
+    color: white;
+}
+[data-textoProdutos = bottom] {
+    transform: translate3d( 0em, 11.5em, 0em);
+}
+[data-textoProdutos = bottom]:hover {
+    transform: translate3d( 0em, 0em, 0em);
+}
+[data-textoProdutos] {
+    transition: 0.8s;
+}
+.seta {
+    display: flex;
+    margin: 0 auto;
+    padding-top: 0;
+}
+.seta img {
+    width: 3vw;
+    height: 5vh;
 }
 /*----------------------- FORMULARIO DA PAGINA OUVIDORIA.HTML -----------------------*/
 .formulario{
